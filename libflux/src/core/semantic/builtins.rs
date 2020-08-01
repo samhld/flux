@@ -879,6 +879,25 @@ pub fn builtins() -> Builtins<'static> {
                         columns: [string]
                     ) -> [t1]
                 "#,
+                "to" => r#"
+                    forall [t0] where t0: Row (
+                        <-tables: [t0],
+                        ?org: string,
+                        bucket: string,
+                        ?host: string,
+                        ?token: string
+                    ) -> [t0]
+                "#,
+                "write" => r#"
+                    forall [t0] where t0: Row (
+                        <-tables: [t0],
+                        ?org: string,
+                        bucket: string,
+                        ?host: string,
+                        ?token: string,
+                        m: string
+                    ) -> [t0]
+                "#,
             },
             "contrib/jsternberg/rows" => semantic_map! {
                 "map" => r#"
