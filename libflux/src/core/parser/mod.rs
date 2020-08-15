@@ -531,6 +531,7 @@ impl Parser {
         Statement::Builtin(Box::new(BuiltinStmt {
             base: self.base_node_from_other_end(&t, &id.base),
             id,
+            ty : self.parse_type_expression(),
         }))
     }
 

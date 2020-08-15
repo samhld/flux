@@ -882,6 +882,7 @@ fn test_json_builtin_statement() {
             base: BaseNode::default(),
             name: "task".to_string(),
         },
+        ty: nil,
     }));
     let serialized = serde_json::to_string(&n).unwrap();
     assert_eq!(

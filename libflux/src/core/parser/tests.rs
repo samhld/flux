@@ -1300,6 +1300,7 @@ fn builtin() {
                     },
                     name: "from".to_string()
                 },
+                ty: nil,
             }))],
             eof: None,
         },
